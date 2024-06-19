@@ -60,6 +60,15 @@ h1 {
     font-family: 'Sora', sans-serif;
     border-radius: 50px;
 }
+/* button:hover {
+    border: 2px solid #d6c64b;
+    color: #d6c64b;
+} */
+button:hover {
+  transition: 0.5s ease-in-out;
+  background: #4fda5b;
+  color: white;
+}
 #famous-quotes {
     margin-right: 0.8rem;
 }
