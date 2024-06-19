@@ -12,7 +12,7 @@ body, h1, h2, h3, p, ul, li {
 
 /* Add some styles for body*/
 body {
-    min-height: 100vh;
+    min-height: 85vh;
     max-width: 1280px;
     margin: 0 auto;
     background: #020617;
@@ -28,6 +28,35 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+
+div.container {
+    text-align: center;
+    background-color: #222939;
+    min-height: 43vh;
+    margin-top: 10rem;
+    background-image: url(../images/bg-image-random-quote.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h-and-buttons {
+    margin-top: 3rem;
+}
+h2 {
+    margin-bottom: 1rem;
+}
+.butt {
+    margin-bottom: 3rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid #524bd6;
+    background: transparent;
+    color: #6565e1;
+    font-family: 'Sora', sans-serif;
+    border-radius: 50px;
+}
+#famous-quotes {
+    margin-right: 0.8rem;
 }
 
 
