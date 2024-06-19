@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
 
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2 {
     margin: 0;
     padding: 0;
 }
@@ -26,18 +26,20 @@ body {
     overflow-x: hidden;
     padding: 4rem;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 div.container {
-    text-align: center;
     background-color: #222939;
     min-height: 43vh;
     margin-top: 10rem;
     background-image: url(../images/bg-image-random-quote.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+
 }
 
 .h-and-buttons {
@@ -45,6 +47,9 @@ div.container {
 }
 h2 {
     margin-bottom: 1rem;
+}
+h1 {
+    margin: 0rem 2rem 0rem 2rem;
 }
 .butt {
     margin-bottom: 3rem;
@@ -58,6 +63,29 @@ h2 {
 #famous-quotes {
     margin-right: 0.8rem;
 }
+
+.images {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #4c55659b;
+    margin: 1.5rem 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+}
+
+img {
+    width: 55px;
+    height: auto;
+}
+.share{
+    padding-right: 1rem;
+    border-right: 2px solid #4c5565a6;
+}
+.copy {
+    padding-left: 1rem;
+}
+
 
 
 @media screen and (min-width: 720px) {
