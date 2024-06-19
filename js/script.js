@@ -1,2 +1,3 @@
-// Add some interactivity to the website
-console.log("Hello, world!");
+const famousButton = document.querySelector("#famous-quotes");
+const inspButton = document.querySelector("#inspirational");
+const h1 = document.querySelector("h1.the-quote");
