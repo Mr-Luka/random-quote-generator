@@ -13,3 +13,16 @@ const getData = async function () {
     }
 }
 getData();
+
+const updateQuote = async function () {
+    const data = await getData();
+    if (data) {
+        h1.textContent = `"${data.quote}"`;
+        author.textContent = data.author;
+    }
+}
+
+
+
+
+famousButton.addEventListener("click", updateQuote);
