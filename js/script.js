@@ -2,6 +2,7 @@ const famousButton = document.querySelector("#famous-quotes");
 const inspButton = document.querySelector("#inspirational");
 const h1 = document.querySelector("h1.the-quote");
 const author = document.querySelector("h2")
+const copy = document.querySelector("img.copy");
 
 const getData = async function () {
     try {
@@ -32,7 +33,16 @@ const handleClick = async function() {
         author.textContent = `${data.author}`;
     }
 }
-
-
 famousButton.addEventListener("click", handleClick);
 inspButton.addEventListener("click", handleClick);
+
+const copyToClipboard = async function () {
+    try {
+        await navigator.clipboard.writeText(h1.textContent);
+        alert("Quote copied to clipboard!");
+    } catch (error){
+        console.error("Error copying to clipboard", error);
+    }
+}
+
+copy.addEventListener("click", copyToClipboard);
