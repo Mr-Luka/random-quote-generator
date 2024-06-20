@@ -8,21 +8,31 @@ const getData = async function () {
         const getQuotes = await fetch("https://api.quotable.io/random");
         const data = await getQuotes.json();
         return {quote: data.content, author:data.author}
-    }   catch (error) {
+    }catch (error) {
         console.error("Error fetching the quote", error);
     }
 }
 getData();
 
-const updateQuote = async function () {
-    const data = await getData();
+const getInspo = async function () {
+    try {
+        const getInspoQuote = await fetch ("https://api.quotable.io/random");
+        const data = await getInspoQuote.json();
+        return {quote: data.content, author: data.author}
+    }catch (error) {
+        console.error("Error fetching the inspirational quote", error);
+    }
+}
+getInspo();
+
+const handleClick = async function() {
+    const data = await getInspo();
     if (data) {
         h1.textContent = `"${data.quote}"`;
-        author.textContent = data.author;
+        author.textContent = `${data.author}`;
     }
 }
 
 
-
-
-famousButton.addEventListener("click", updateQuote);
+famousButton.addEventListener("click", handleClick);
+inspButton.addEventListener("click", handleClick);
