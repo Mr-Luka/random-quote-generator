@@ -91,7 +91,27 @@ img {
     padding-left: 1rem;
 }
 
+.sharePressed {
+    animation: animate 0.4s;
+}
 
+@keyframes animate{
+    0%{
+        transform: rotate(0deg) translateX(0px);
+    }
+    25%{
+        transform: rotate(-10deg) translateX(-10px);
+    }
+    50%{
+        transform: rotate(0deg) translateX(0px);
+    }
+    75%{
+        transform: rotate(10deg) translateX(10px);
+    }
+    100%{
+        transform: rotate(0deg) translateX(0px);
+    }
+}
 
 @media screen and (min-width: 720px) {
 }

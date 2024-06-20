@@ -1,8 +1,10 @@
+const container = document.querySelector(".container");
 const famousButton = document.querySelector("#famous-quotes");
 const inspButton = document.querySelector("#inspirational");
 const h1 = document.querySelector("h1.the-quote");
 const author = document.querySelector("h2")
 const copy = document.querySelector("img.copy");
+const share = document.querySelector("img.share");
 
 const getData = async function () {
     try {
@@ -44,5 +46,13 @@ const copyToClipboard = async function () {
         console.error("Error copying to clipboard", error);
     }
 }
+function removeShake() {
+    container.classList.remove("sharePressed")
+}
+function shakeShare() {
+    container.classList.add("sharePressed")
+    setTimeout(removeShake, 400);
+}
 
+share.addEventListener("click", shakeShare)
 copy.addEventListener("click", copyToClipboard);
